@@ -20,7 +20,7 @@ void insertion_sort_list(listint_t **list)
 			prev_2 = prev->prev;
 			if (prev_2)
 				prev_2->next = cursor;
-			if(cursor->next)
+			if (cursor->next)
 				(cursor->next)->prev = prev;
 			prev->next = cursor->next;
 			prev->prev = cursor;
