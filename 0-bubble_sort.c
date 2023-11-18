@@ -4,7 +4,7 @@
  * @array: array of integers
  * @size: size of the array
  */
-void bubble_sort(int *array,  ize_t size)
+void bubble_sort(int *array,  size_t size)
 {
 	int is_swapped = 1;
 	size_t j = 0;
