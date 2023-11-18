@@ -27,7 +27,6 @@ void _swap(int *array, int idx1, int idx2);
 void bubble_sort(int *array, size_t size);
 
 /** insertion sort list **/
-size_t dlistint_len(const listint_t *h);
 void insertion_sort_list(listint_t **list);
 
 /** shell sort list **/
