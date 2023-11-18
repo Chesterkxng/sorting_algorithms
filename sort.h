@@ -30,5 +30,8 @@ void bubble_sort(int *array, size_t size);
 size_t dlistint_len(const listint_t *h);
 void insertion_sort_list(listint_t **list);
 
+/** shell sort list **/
+void shell_sort(int *array, size_t size);
+
 
 #endif /* SORT_H */
