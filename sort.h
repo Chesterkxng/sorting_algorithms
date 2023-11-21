@@ -31,5 +31,8 @@ void insertion_sort_list(listint_t **list);
 /** shell sort list **/
 void shell_sort(int *array, size_t size);
 
+/** selection sort **/
+void selection_sort(int *array, size_t size);
+
 
 #endif /* SORT_H */
