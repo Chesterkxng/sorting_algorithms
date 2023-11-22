@@ -34,5 +34,7 @@ void shell_sort(int *array, size_t size);
 /** selection sort **/
 void selection_sort(int *array, size_t size);
 
+/** quick sort - Lomuto partition **/
+void quick_sort(int *array, size_t size);
 
 #endif /* SORT_H */
