@@ -37,4 +37,7 @@ void selection_sort(int *array, size_t size);
 /** quick sort - Lomuto partition **/
 void quick_sort(int *array, size_t size);
 
+/** counting sort **/
+void counting_sort(int *array, size_t size);
+
 #endif /* SORT_H */
