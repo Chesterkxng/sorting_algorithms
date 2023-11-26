@@ -35,14 +35,13 @@ void save_array_val_occur(int *array1, size_t size1, int *array2, size_t size2)
  */
 void counting_sort(int *array, size_t size)
 {
-	int i, j, max;
+	int i, max;
 	int *count, *sorted;
 
 	/* don't sort empty array or one element array */
 	if (!array || size == 1)
 		return;
-
-	for (i = 0, max = array[i]; (unsigned int)i < size; i++)
+	for (i = 1, max = array[0]; (unsigned int)i < size; i++)
 		if (array[i] > max)
 			max = array[i];
 
@@ -64,12 +63,14 @@ void counting_sort(int *array, size_t size)
 	if (!sorted)
 		return;
 
+	for (i = 0; (unsigned int)i < size; i++)
+		sorted[i] = 0;
 	for (i = size - 1; i >= 0; i--)
 	{
-		j = count[array[i]] - 1;
-		sorted[j] = array[i];
+		sorted[count[array[i]] - 1] = array[i];
+		count[array[i]]--;
 	}
-	for (i = 0, j = 0; (unsigned int)i < size; i++)
+	for (i = 0; (unsigned int)i < size; i++)
 		array[i] = sorted[i];
 
 	free(count);
